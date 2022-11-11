@@ -18,6 +18,7 @@ window.addEventListener('resize', function(){
 })
 
 
-let posicaoX = Math.random()
-let posicaoY = Math.random()
+let posicaoX = Math.floor(Math.random() * screenWidth)
+let posicaoY = Math.floor(Math.random() * screenHeight)
 
+console.log(posicaoX,posicaoY)
