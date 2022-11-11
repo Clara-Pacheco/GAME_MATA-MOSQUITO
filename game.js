@@ -22,3 +22,14 @@ let posicaoX = Math.floor(Math.random() * screenWidth)
 let posicaoY = Math.floor(Math.random() * screenHeight)
 
 console.log(posicaoX,posicaoY)
+
+// Create html element dynamically
+
+const mosquito = document.createElement('img')
+mosquito.src = "images/mosca.png"
+mosquito.className = 'mosquito1'
+mosquito.style.left = posicaoX + 'px'
+mosquito.style.top = posicaoY + 'px'
+mosquito.style.position = 'absolute'
+document.body.appendChild(mosquito)
+
