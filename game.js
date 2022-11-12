@@ -30,7 +30,7 @@ console.log(posicaoX,posicaoY)
 
 const mosquito = document.createElement('img')
 mosquito.src = "images/mosca.png"
-mosquito.className = tamanhoMosquitoAleatorio()
+mosquito.className = tamanhoMosquitoAleatorio() + ' ' + ladoAleatorio()
 mosquito.style.left = posicaoX + 'px'
 mosquito.style.top = posicaoY + 'px'
 mosquito.style.position = 'absolute'
@@ -47,3 +47,13 @@ function tamanhoMosquitoAleatorio(){
       return 'mosquito3'
   }
 }
+
+ function ladoAleatorio(){
+  let lado = Math.floor(Math.random() * 2)
+  switch(lado){
+    case 0:
+      return 'ladoA'
+    case 1:
+      return 'ladoB'
+  }
+ }
