@@ -17,25 +17,27 @@ window.addEventListener('resize', function(){
   console.log(screenWidth, screenHeight)
 })
 
+function createElement(){
 
-let posicaoX = Math.floor(Math.random() * screenWidth) - 90
-let posicaoY = Math.floor(Math.random() * screenHeight) - 90
+    let posicaoX = Math.floor(Math.random() * screenWidth) - 90
+    let posicaoY = Math.floor(Math.random() * screenHeight) - 90
 
-posicaoX = posicaoX < 0 ? 0 : posicaoX
-posicaoY = posicaoY < 0 ? 0 : posicaoY
+    posicaoX = posicaoX < 0 ? 0 : posicaoX
+    posicaoY = posicaoY < 0 ? 0 : posicaoY
 
-console.log(posicaoX,posicaoY)
+    console.log(posicaoX,posicaoY)
 
-// Create html element dynamically
+    // Create html element dynamically
 
-const mosquito = document.createElement('img')
-mosquito.src = "images/mosca.png"
-mosquito.className = tamanhoMosquitoAleatorio() + ' ' + ladoAleatorio()
-mosquito.style.left = posicaoX + 'px'
-mosquito.style.top = posicaoY + 'px'
-mosquito.style.position = 'absolute'
-document.body.appendChild(mosquito)
-
+    const mosquito = document.createElement('img')
+    mosquito.src = "images/mosca.png"
+    mosquito.className = tamanhoMosquitoAleatorio() + ' ' + ladoAleatorio()
+    mosquito.style.left = posicaoX + 'px'
+    mosquito.style.top = posicaoY + 'px'
+    mosquito.style.position = 'absolute'
+    document.body.appendChild(mosquito)
+    
+}
 function tamanhoMosquitoAleatorio(){
   let classe = Math.floor(Math.random()*3)
   switch(classe){
