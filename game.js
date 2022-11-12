@@ -1,6 +1,7 @@
 
 let screenHeight = 0
 let screenWidth = 0
+let vidas_perdidas = 1
 
 function ajustaTamanhoPalcoJogo(){
   screenHeight = window.innerHeight
@@ -22,6 +23,14 @@ function createElement(){
 
     if(document.querySelector('#mosquito')){
       document.querySelector('#mosquito').remove()
+
+      if(vidas_perdidas <= 3){
+        document.querySelector('#v'+ vidas_perdidas).src = "images/coracao_vazio.png"
+        vidas_perdidas++
+      }else{
+        alert('game over!')
+      }
+      
     }
 
     let posicaoX = Math.floor(Math.random() * screenWidth) - 90
