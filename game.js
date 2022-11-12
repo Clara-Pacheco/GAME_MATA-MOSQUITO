@@ -28,7 +28,7 @@ function createElement(){
         document.querySelector('#v'+ vidas_perdidas).src = "images/coracao_vazio.png"
         vidas_perdidas++
       }else{
-        alert('game over!')
+        window.location.href="fim_de_jogo.html"
       }
       
     }
