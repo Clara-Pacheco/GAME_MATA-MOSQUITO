@@ -19,6 +19,7 @@ window.addEventListener('resize', function(){
 
 function createElement(){
 
+
     if(document.querySelector('#mosquito')){
       document.querySelector('#mosquito').remove()
     }
@@ -41,6 +42,12 @@ function createElement(){
     mosquito.style.position = 'absolute'
     mosquito.id = 'mosquito'
     document.body.appendChild(mosquito)
+
+    const elementoMosquito = document.querySelector('#mosquito')
+    elementoMosquito.addEventListener('click',function(){
+      this.remove()
+    })
+    
 
 }
 
