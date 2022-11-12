@@ -36,8 +36,14 @@ function createElement(){
     mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
     document.body.appendChild(mosquito)
-    
+
 }
+
+setInterval(function(){
+  createElement()
+},1000)
+
+
 function tamanhoMosquitoAleatorio(){
   let classe = Math.floor(Math.random()*3)
   switch(classe){
