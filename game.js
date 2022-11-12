@@ -19,6 +19,10 @@ window.addEventListener('resize', function(){
 
 function createElement(){
 
+    if(document.querySelector('#mosquito')){
+      document.querySelector('#mosquito').remove()
+    }
+
     let posicaoX = Math.floor(Math.random() * screenWidth) - 90
     let posicaoY = Math.floor(Math.random() * screenHeight) - 90
 
@@ -35,6 +39,7 @@ function createElement(){
     mosquito.style.left = posicaoX + 'px'
     mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
+    mosquito.id = 'mosquito'
     document.body.appendChild(mosquito)
 
 }
