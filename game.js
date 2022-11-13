@@ -2,6 +2,7 @@
 let screenHeight = 0
 let screenWidth = 0
 let vidas_perdidas = 1
+let tempo = 10
 
 function ajustaTamanhoPalcoJogo(){
   screenHeight = window.innerHeight
@@ -17,6 +18,21 @@ window.addEventListener('resize', function(){
   screenWidth = window.innerWidth
   console.log(screenWidth, screenHeight)
 })
+
+document.querySelector('#cronometro').innerHTML = tempo
+
+let cronometro = setInterval(function(){
+
+  tempo -= 1
+
+  if(tempo < 0){
+    clearInterval(cronometro)
+    clearInterval(createMosquitoOneSecond)  
+  }else{
+    document.querySelector('#cronometro').innerHTML = tempo
+  }
+ 
+},1000)
 
 function createElement(){
 
@@ -60,9 +76,9 @@ function createElement(){
 
 }
 
-setInterval(function(){
+let createMosquitoOneSecond = setInterval(function(){
   createElement()
-},1000)
+},2000)
 
 
 function tamanhoMosquitoAleatorio(){
