@@ -8,6 +8,8 @@ startGame.addEventListener('click', function(){
   alert(valueSelect)
  }
 
+  window.location.href="game.html?" + valueSelect
+
 })
 
 
