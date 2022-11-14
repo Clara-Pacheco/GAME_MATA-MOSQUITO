@@ -3,6 +3,18 @@ let screenHeight = 0
 let screenWidth = 0
 let vidas_perdidas = 1
 let tempo = 10
+criaMosquitoTempo = 1500
+
+let nivel = window.location.search
+nivel = nivel.replace('?','')
+if(nivel === 'normal'){
+  criaMosquitoTempo = 1500
+}else if( nivel === 'dificil'){
+  criaMosquitoTempo = 1000
+}else{
+  criaMosquitoTempo = 750
+}
+
 
 function ajustaTamanhoPalcoJogo(){
   screenHeight = window.innerHeight
@@ -79,7 +91,7 @@ function createElement(){
 
 let createMosquitoOneSecond = setInterval(function(){
   createElement()
-},2000)
+},criaMosquitoTempo)
 
 
 function tamanhoMosquitoAleatorio(){
